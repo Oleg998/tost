@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://oleg998.github.io/tost/",
+  "homepage": "https://Oleg998.github.io/tost",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url/tost/"
