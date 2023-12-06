@@ -17,10 +17,9 @@ Product()
 
 function getProduct(arr) { 
     return arr.map(
-    ({ img ,_id,name,price,size,category,popularity}) =>`<li class="product-item ">
-    
-    <a class="link" href="">
-    <div class="catolog-item">
+    ({ img ,_id,name,price,size,category,popularity}) =>
+    `<li class="product-item js-card " data-id="${_id}">  
+      <div class="catolog-item js-info">
       <div class="bg-img">
         <img class = "item-img" src="${img}" alt="${name}" /></div>
        
@@ -32,12 +31,22 @@ function getProduct(arr) {
         </div>
         <div class="catalog-price">
           <p>$${price}</p>
-          <button type="button"></button>
+          <button type="button" class="btn btn-item js-btn  "></button>
         </div>
       </div>
-    </a>
+    
    
   </li>`
-    ).join('')
+    ).join('').replace("_", " ").replace("oz", "g")
 }
 
+ productCard.addEventListener ("click", onclick);
+function onclick(event){
+if(event.target.classList.contains("js-btn")){
+    const {_id}=event.target.closest(".js-card").dataset; 
+    console.log(_id);
+   }
+ }
+function findProduct(productId){
+  return data.results.find(({_id})=>_id===productId)
+}
