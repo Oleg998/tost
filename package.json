@@ -5,7 +5,7 @@
   "homepage": "https://Oleg998.github.io/tost",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url/tost/"
+    "build": "parcel build src/*.html --public-url /tost/"
   },
   "repository": {
     "type": "git",
